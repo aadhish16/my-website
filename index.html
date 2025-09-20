@@ -51,6 +51,73 @@
       padding: 0 20px;
     }
 
+    /* Animation Keyframes */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
     /* Header Styles */
     header {
       position: fixed;
@@ -62,6 +129,16 @@
       backdrop-filter: blur(10px);
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
+      animation: slideInDown 0.5s ease;
+    }
+
+    @keyframes slideInDown {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
     }
 
     body.dark-mode header {
@@ -83,6 +160,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      animation: pulse 2s infinite;
     }
 
     .logo-dot {
@@ -190,6 +268,7 @@
       max-width: 650px;
       z-index: 2;
       position: relative;
+      animation: fadeIn 1s ease;
     }
 
     .hero-badge {
@@ -203,6 +282,7 @@
       padding: 8px 16px;
       border-radius: 100px;
       margin-bottom: 24px;
+      animation: fadeIn 0.8s ease;
     }
 
     .hero-badge i {
@@ -219,6 +299,9 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typewriter 1.5s steps(40) 0.5s 1 normal both;
     }
 
     .hero-desc {
@@ -226,6 +309,7 @@
       color: var(--text-secondary);
       margin-bottom: 40px;
       max-width: 600px;
+      animation: fadeIn 1.2s ease;
     }
 
     body.dark-mode .hero-desc {
@@ -236,6 +320,7 @@
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
+      animation: fadeIn 1.5s ease;
     }
 
     .btn {
@@ -273,6 +358,17 @@
       color: white;
     }
 
+    .btn-tertiary {
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+      color: white;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-tertiary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
     .hero-image {
       position: absolute;
       right: 0;
@@ -281,6 +377,7 @@
       width: 45%;
       max-width: 500px;
       z-index: 1;
+      animation: slideInRight 1s ease, float 6s ease-in-out infinite;
     }
 
     .hero-image img {
@@ -307,6 +404,7 @@
       text-align: center;
       box-shadow: var(--shadow-md);
       transition: var(--transition);
+      animation: fadeIn 1s ease;
     }
 
     body.dark-mode .stat-card {
@@ -340,6 +438,14 @@
     /* Section Common Styles */
     .section {
       padding: 100px 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .section-header {
@@ -392,6 +498,7 @@
       overflow: hidden;
       box-shadow: var(--shadow-md);
       transition: var(--transition);
+      animation: fadeIn 1s ease;
     }
 
     body.dark-mode .education-card {
@@ -456,6 +563,7 @@
       box-shadow: var(--shadow-md);
       transition: var(--transition);
       text-align: center;
+      animation: fadeIn 1s ease;
     }
 
     body.dark-mode .skill-card {
@@ -524,6 +632,7 @@
       overflow: hidden;
       box-shadow: var(--shadow-md);
       transition: var(--transition);
+      animation: fadeIn 1s ease;
     }
 
     body.dark-mode .project-card {
@@ -619,6 +728,7 @@
       text-align: center;
       box-shadow: var(--shadow-md);
       transition: var(--transition);
+      animation: fadeIn 1s ease;
     }
 
     body.dark-mode .certification-card {
@@ -701,6 +811,7 @@
       align-items: center;
       gap: 16px;
       margin-bottom: 20px;
+      animation: fadeIn 1s ease;
     }
 
     .contact-icon {
@@ -810,6 +921,38 @@
       font-size: 14px;
     }
 
+    /* Scroll to Top Button */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: var(--shadow-lg);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+    }
+
+    .scroll-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top:hover {
+      background: var(--primary-light);
+      transform: translateY(-5px);
+    }
+
     /* Responsive Design */
     @media (max-width: 1024px) {
       .hero-title {
@@ -896,6 +1039,7 @@
         max-width: 400px;
         margin: 40px auto 0;
         transform: none;
+        animation: fadeIn 1s ease, float 6s ease-in-out infinite;
       }
       
       .projects-grid {
@@ -915,11 +1059,24 @@
       .contact-methods {
         grid-template-columns: 1fr;
       }
+      
+      .hero-btns {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
     }
 
     @media (max-width: 576px) {
       .hero-title {
         font-size: 36px;
+        white-space: normal;
+        animation: fadeIn 1s ease;
       }
       
       .hero-desc {
@@ -987,7 +1144,7 @@
           Computer Engineering Student
         </div>
         
-        <h1 class="hero-title">Seeking Internship Opportunities in IoT & AI/ML</h1>
+        <h1 class="hero-title">Seeking for Internship</h1>
         
         <p class="hero-desc">
           Motivated Diploma student in Computer Engineering and IoT, passionate about smart technologies, automation, 
@@ -1000,6 +1157,9 @@
           </a>
           <a href="#contact" class="btn btn-secondary">
             <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+          <a href="#" class="btn btn-tertiary" id="resumeDownload">
+            <i class="fas fa-download"></i> View Resume
           </a>
         </div>
       </div>
@@ -1615,10 +1775,15 @@
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2025 Aadhish Kumar S. All Rights Reserved.</p>
+        <p> 2025 Aadhish Kumar S. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
+
+  <!-- Scroll to Top Button -->
+  <div class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
 
   <script>
     // Mobile Menu Toggle
@@ -1714,6 +1879,66 @@
           link.classList.add('active');
         }
       });
+    });
+
+    // Scroll animation for sections
+    const sections = document.querySelectorAll('.section');
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Scroll to top button
+    const scrollTopBtn = document.getElementById('scrollTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add('active');
+      } else {
+        scrollTopBtn.classList.remove('active');
+      }
+    });
+    
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Resume download functionality
+    const resumeDownload = document.getElementById('resumeDownload');
+    
+    resumeDownload.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      // Create a temporary link element
+      const link = document.createElement('a');
+      link.href = 'https://drive.google.com/file/d/1EAQIdMfKKeVQUgkYZbBLXYcdWt73drzZ/view?usp=sharing'; // Replace with actual resume URL
+      link.download = 'Aadhish_Kumar_Resume.pdf';
+      
+      // Simulate click to trigger download
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Show a message (you can replace this with your actual download logic)
+      alert('Resume download would start. For now, this is a demonstration. Replace the link with your actual resume URL.');
     });
   </script>
 </body>
