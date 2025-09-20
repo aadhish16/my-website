@@ -216,6 +216,7 @@
       line-height: 1.1;
       margin-bottom: 20px;
       background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -321,6 +322,7 @@
       font-size: 42px;
       font-weight: 800;
       background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 8px;
@@ -964,11 +966,11 @@
       </ul>
       
       <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
           <i class="fas fa-moon"></i>
         </button>
         
-        <button class="menu-toggle" id="menuToggle">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
           <span></span>
           <span></span>
           <span></span>
@@ -1003,7 +1005,7 @@
       </div>
       
       <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Computer Engineering Student">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aadhish Kumar - Computer Engineering Student">
       </div>
     </div>
   </section>
@@ -1192,7 +1194,7 @@
       <div class="projects-grid">
         <div class="project-card">
           <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="IoT-Based Smart Home">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="IoT-Based Smart Home Prototype">
           </div>
           
           <div class="project-content">
@@ -1209,10 +1211,10 @@
             </div>
             
             <div class="project-links">
-              <a href="#" class="project-link">
+              <a href="https://example.com/smart-home-demo" class="project-link" target="_blank">
                 <i class="fas fa-globe"></i> Live Demo
               </a>
-              <a href="#" class="project-link">
+              <a href="https://github.com/yourusername/smart-home-project" class="project-link" target="_blank">
                 <i class="fab fa-github"></i> Source Code
               </a>
             </div>
@@ -1221,7 +1223,7 @@
         
         <div class="project-card">
           <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI Assistant">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Helmet & Vehicle Detection System">
           </div>
           
           <div class="project-content">
@@ -1238,10 +1240,10 @@
             </div>
             
             <div class="project-links">
-              <a href="#" class="project-link">
+              <a href="https://example.com/helmet-detection-demo" class="project-link" target="_blank">
                 <i class="fas fa-globe"></i> Live Demo
               </a>
-              <a href="#" class="project-link">
+              <a href="https://github.com/yourusername/helmet-detection" class="project-link" target="_blank">
                 <i class="fab fa-github"></i> Source Code
               </a>
             </div>
@@ -1250,7 +1252,7 @@
         
         <div class="project-card">
           <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="College Admin System">
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Smart IoT College Administrator System">
           </div>
           
           <div class="project-content">
@@ -1267,10 +1269,10 @@
             </div>
             
             <div class="project-links">
-              <a href="#" class="project-link">
+              <a href="https://example.com/college-admin-demo" class="project-link" target="_blank">
                 <i class="fas fa-globe"></i> Live Demo
               </a>
-              <a href="#" class="project-link">
+              <a href="https://github.com/yourusername/college-admin-system" class="project-link" target="_blank">
                 <i class="fab fa-github"></i> Source Code
               </a>
             </div>
@@ -1279,7 +1281,7 @@
         
         <div class="project-card">
           <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pothole Detector">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="IoT Pothole Detector">
           </div>
           
           <div class="project-content">
@@ -1296,10 +1298,10 @@
             </div>
             
             <div class="project-links">
-              <a href="#" class="project-link">
+              <a href="https://example.com/pothole-detector-concept" class="project-link" target="_blank">
                 <i class="fas fa-globe"></i> Concept
               </a>
-              <a href="#" class="project-link">
+              <a href="https://github.com/yourusername/pothole-detector" class="project-link" target="_blank">
                 <i class="fab fa-github"></i> Documentation
               </a>
             </div>
@@ -1309,7 +1311,7 @@
         <!-- New Project 1: Air Mouse using OpenCV -->
         <div class="project-card">
           <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Air Mouse">
+            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Air Mouse Using OpenCV">
           </div>
           
           <div class="project-content">
@@ -1326,10 +1328,10 @@
             </div>
             
             <div class="project-links">
-              <a href="#" class="project-link">
+              <a href="https://example.com/air-mouse-demo" class="project-link" target="_blank">
                 <i class="fas fa-globe"></i> Live Demo
               </a>
-              <a href="#" class="project-link">
+              <a href="https://github.com/yourusername/air-mouse" class="project-link" target="_blank">
                 <i class="fab fa-github"></i> Source Code
               </a>
             </div>
@@ -1339,7 +1341,7 @@
         <!-- New Project 2: Certificate Builder -->
         <div class="project-card">
           <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Certificate Builder">
+            <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Certificate Builder for Organizations">
           </div>
           
           <div class="project-content">
@@ -1356,10 +1358,10 @@
             </div>
             
             <div class="project-links">
-              <a href="#" class="project-link">
+              <a href="https://example.com/certificate-builder-demo" class="project-link" target="_blank">
                 <i class="fas fa-globe"></i> Live Demo
               </a>
-              <a href="#" class="project-link">
+              <a href="https://github.com/yourusername/certificate-builder" class="project-link" target="_blank">
                 <i class="fab fa-github"></i> Source Code
               </a>
             </div>
@@ -1369,7 +1371,7 @@
         <!-- New Project 3: SGPA/CGPA Calculator -->
         <div class="project-card">
           <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SGPA/CGPA Calculator">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SGPA & CGPA Calculator">
           </div>
           
           <div class="project-content">
@@ -1386,10 +1388,10 @@
             </div>
             
             <div class="project-links">
-              <a href="#" class="project-link">
+              <a href="https://example.com/gpa-calculator-demo" class="project-link" target="_blank">
                 <i class="fas fa-globe"></i> Live Demo
               </a>
-              <a href="#" class="project-link">
+              <a href="https://github.com/yourusername/gpa-calculator" class="project-link" target="_blank">
                 <i class="fab fa-github"></i> Source Code
               </a>
             </div>
@@ -1399,7 +1401,7 @@
         <!-- New Project 4: Resume Builder -->
         <div class="project-card">
           <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Resume Builder">
+            <img src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Interactive Resume Builder">
           </div>
           
           <div class="project-content">
@@ -1416,10 +1418,10 @@
             </div>
             
             <div class="project-links">
-              <a href="#" class="project-link">
+              <a href="https://example.com/resume-builder-demo" class="project-link" target="_blank">
                 <i class="fas fa-globe"></i> Live Demo
               </a>
-              <a href="#" class="project-link">
+              <a href="https://github.com/yourusername/resume-builder" class="project-link" target="_blank">
                 <i class="fab fa-github"></i> Source Code
               </a>
             </div>
@@ -1517,7 +1519,7 @@
               
               <div class="contact-detail">
                 <h4>Email Me</h4>
-                <p>aadhishcpat@gmail.com</p>
+                <p><a href="mailto:aadhishcpat@gmail.com" style="color: inherit;">aadhishcpat@gmail.com</a></p>
               </div>
             </div>
             
@@ -1539,7 +1541,7 @@
               
               <div class="contact-detail">
                 <h4>Call Me</h4>
-                <p>+91 9344926686</p>
+                <p><a href="tel:+919344926686" style="color: inherit;">+91 9344926686</a></p>
               </div>
             </div>
             
@@ -1550,7 +1552,7 @@
               
               <div class="contact-detail">
                 <h4>LinkedIn</h4>
-                <p>linkedin.com/in/aadhish-kumar</p>
+                <p><a href="https://linkedin.com/in/aadhish-kumar" target="_blank" style="color: inherit;">linkedin.com/in/aadhish-kumar</a></p>
               </div>
             </div>
           </div>
@@ -1570,16 +1572,16 @@
           </p>
           
           <div class="social-links">
-            <a href="#" class="social-link">
+            <a href="https://linkedin.com/in/aadhish-kumar" class="social-link" target="_blank" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" class="social-link">
+            <a href="https://github.com/yourusername" class="social-link" target="_blank" aria-label="GitHub">
               <i class="fab fa-github"></i>
             </a>
-            <a href="#" class="social-link">
+            <a href="https://twitter.com/yourusername" class="social-link" target="_blank" aria-label="Twitter">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="#" class="social-link">
+            <a href="https://instagram.com/yourusername" class="social-link" target="_blank" aria-label="Instagram">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
@@ -1602,12 +1604,12 @@
           <h4>Areas of Interest</h4>
           
           <ul>
-            <li><a href="#">IoT Development</a></li>
-            <li><a href="#">AI/ML Engineering</a></li>
-            <li><a href="#">Embedded Systems</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Automation</a></li>
-            <li><a href="#">Robotics</a></li>
+            <li><a href="#skills">IoT Development</a></li>
+            <li><a href="#skills">AI/ML Engineering</a></li>
+            <li><a href="#skills">Embedded Systems</a></li>
+            <li><a href="#skills">Web Development</a></li>
+            <li><a href="#skills">Automation</a></li>
+            <li><a href="#skills">Robotics</a></li>
           </ul>
         </div>
       </div>
@@ -1686,6 +1688,30 @@
             menuToggle.classList.remove('active');
             navLinks.classList.remove('active');
           }
+        }
+      });
+    });
+
+    // Update active nav link on scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - 100) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
         }
       });
     });
